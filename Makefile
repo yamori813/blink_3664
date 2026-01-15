@@ -17,6 +17,7 @@ block.mot:	blink.elf
 
 blink.elf:	$(OBJS)
 	$(CROSS_CC) $(CROSS_LDFLAGS) -o $@ $(OBJS)
+	$(CROSS_SIZE) $@
 
 .c.o:
 	$(CROSS_CC) $(CROSS_CFLAGS) -c $<
